@@ -16,8 +16,85 @@
             line-height: 1.6;
             color: #2c3e50;
             background: #ffffff;
+            padding-top: 50px; /* Account for fixed preheader */
         }
         
+        /* Preheader Styles */
+        .preheader-bar {
+            background-color: #2c3e50;
+            padding: 12px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .preheader-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .preheader-text {
+            color: #ffffff;
+            margin: 0;
+            font-size: 16px;
+            flex: 1;
+        }
+
+        .preheader-hook {
+            color: #f39c12;
+            font-weight: 600;
+        }
+
+        .preheader-cta {
+            background-color: #e74c3c;
+            color: #ffffff;
+            padding: 10px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            margin-left: 20px;
+        }
+
+        .preheader-cta:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Mobile Responsive for Preheader */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 90px; /* More space for mobile preheader */
+            }
+            
+            .preheader-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            
+            .preheader-text {
+                font-size: 14px;
+            }
+            
+            .preheader-cta {
+                margin-left: 0;
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+        
+        /* Original Styles */
         .container {
             max-width: 650px;
             margin: 0 auto;
@@ -26,7 +103,6 @@
         
         .header-space {
             height: 20px;
-
         }
         
         .headline {
@@ -167,7 +243,7 @@
             color: #27ae60;
             font-weight: bold;
             font-size: 1.2rem;
- }
+        }
         
         .method-teaser {
             background: linear-gradient(135deg, #667eea, #764ba2);
@@ -242,8 +318,7 @@
         }
         
         .vip-benefits h4 {
-            color: #000000
-;
+            color: #000000;
             margin-bottom: 15px;
             text-align: center;
             font-size: 1.1rem;
@@ -398,6 +473,17 @@
     </style>
 </head>
 <body>
+    <!-- Preheader Section -->
+    <div class="preheader-bar">
+        <div class="preheader-content">
+            <p class="preheader-text">
+                <span class="preheader-hook">While others debate if it's "too late"...</span> 
+                Smart people are quietly claiming their piece of a $550 billion opportunity
+            </p>
+            <a href="https://icc-d404ff.circle.so/c/new-start-here" class="preheader-cta" target="_blank">Get VIP Priority Access</a>
+        </div>
+    </div>
+
     <div class="container">
         <div class="header-space"></div>
         
@@ -409,9 +495,7 @@
             Discover how everyday people are earning $3,000–$10,000+ per month in 2025 by simply connecting others with proven digital products (no product or previous experience required).
         </h2>
 
-
-        
-                <div class="cta-section">
+        <div class="cta-section">
             <div class="vip-badge">Priority VIP List</div>
             
             <h3 class="cta-headline">Secure Your Priority VIP Access</h3>
@@ -441,13 +525,14 @@
         <div class="opportunity-window">
             <h3>The $550 Billion Reason Smart People Ignore the "It's Saturated" Crowd</h3>
             <p>Ten years ago, when the digital education market was worth <span class="market-stat">$107 billion</span>, people said: <em>"Too late. It's saturated."</em></p>
-    <br>
+            <br>
             <p>Those who believed them? They watched from the sidelines as the market exploded to <span class="market-stat">$325 billion</span>.</p>
-          <br>
-    <p>Today? They still say "It's too saturated."</p>
-    <br>
+            <br>
+            <p>Today? They still say "It's too saturated."</p>
+            <br>
             <p>Meanwhile, the market is projected to hit <span class="market-stat">$880 billion</span> by 2033. That's <strong>$550 billion in new growth,</strong> more than DOUBLE last decade.</p>
         </div>
+        
         <div class="body-copy">
             <p><strong>Here's what most people don't realize:</strong></p>
             
