@@ -17,6 +17,7 @@
             color: #1e293b;
             background: #ffffff;
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -45,10 +46,7 @@
             font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 2.5px;
-            background: linear-gradient(135deg, #14b8a6 0%, #059669 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #14b8a6;
             font-weight: 700;
             margin-bottom: 28px;
         }
@@ -58,8 +56,10 @@
             font-weight: 800;
             color: #0f172a;
             margin-bottom: 28px;
-            line-height: 1.08;
+            line-height: 1.15;
             letter-spacing: -0.04em;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
         }
         
         .headline-accent {
@@ -76,6 +76,8 @@
             font-weight: 400;
             max-width: 850px;
             margin: 0 auto 44px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
         }
 
         .sub-headline strong {
@@ -118,7 +120,7 @@
 
         .market-content p {
             font-size: 1.15rem;
-            color: #166534;
+            color: #0f172a;
             font-weight: 500;
             line-height: 1.7;
             margin-bottom: 16px;
@@ -129,7 +131,7 @@
         }
 
         .market-content strong {
-            color: #15803d;
+            color: #059669;
             font-weight: 700;
         }
 
@@ -149,6 +151,10 @@
             display: inline-block;
             text-decoration: none;
             box-shadow: 0 6px 20px rgba(244, 63, 94, 0.3);
+            min-height: 60px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .cta-button:hover {
@@ -252,7 +258,7 @@
 
         .story-text .highlight {
             display: block;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             font-weight: 700;
             margin-top: 16px;
             padding-top: 16px;
@@ -289,7 +295,7 @@
 
         .origin-story p {
             font-size: 1.15rem;
-            line-height: 1.8;
+            line-height: 1.9;
             color: #1e293b;
             margin-bottom: 24px;
         }
@@ -401,12 +407,9 @@
         .method-tagline {
             text-align: center;
             font-size: 1.3rem;
-            background: linear-gradient(135deg, #14b8a6 0%, #059669 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #059669;
             font-weight: 600;
-            font-style: italic;
+            font-style: normal;
             margin-bottom: 56px;
         }
 
@@ -525,6 +528,11 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
+        .benefit-card:first-child {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border: 2px solid #14b8a6;
+        }
+
         .benefit-card:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(251, 191, 36, 0.15);
@@ -576,7 +584,7 @@
         .urgency-banner p {
             color: #475569;
             font-size: 1.1rem;
-            line-height: 1.7;
+            line-height: 1.9;
         }
 
         .urgency-banner strong {
@@ -621,14 +629,15 @@
         .ps-note {
             margin-top: 24px;
             font-size: 0.95rem;
-            color: #475569;
-            font-style: italic;
-            font-weight: 500;
+            color: #0f172a;
+            font-style: normal;
+            font-weight: 600;
         }
 
         .ps-note strong {
             color: #dc2626;
             font-weight: 700;
+            font-size: 1.05rem;
         }
 
         .final-cta-section h2 {
@@ -694,16 +703,16 @@
             line-height: 1.7;
         }
 
-        .faq-item:nth-child(4) {
+        .faq-item:nth-child(3) {
             background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
             padding: 20px 20px 20px 60px;
             margin-left: -20px;
             margin-right: -20px;
             border-radius: 8px;
-            border-left: 4px solid #14b8a6;
+            border-left: 6px solid #14b8a6;
         }
 
-        .faq-item:nth-child(4) .faq-icon {
+        .faq-item:nth-child(3) .faq-icon {
             left: 20px;
         }
 
@@ -758,9 +767,15 @@
                 padding: 48px 20px 64px;
             }
             .headline {
-                font-size: 2.5rem;
+                font-size: 2.75rem;
                 margin-bottom: 20px;
-                line-height: 1.1;
+                line-height: 1.15;
+                letter-spacing: -0.03em;
+            }
+            .headline-accent {
+                background: none;
+                -webkit-text-fill-color: initial;
+                color: #6366f1;
             }
             .sub-headline {
                 font-size: 1.15rem;
@@ -799,8 +814,8 @@
                 font-size: 0.8rem;
             }
             .cta-button {
-                padding: 18px 32px;
-                font-size: 1rem;
+                padding: 22px 40px;
+                font-size: 1.05rem;
                 width: 100%;
             }
             .story-visual {
@@ -817,14 +832,14 @@
                 padding: 32px 24px;
             }
             .story-icon {
-                width: 52px;
-                height: 52px;
+                width: 64px;
+                height: 64px;
             }
             .story-text {
                 font-size: 1rem;
             }
             .story-text .highlight {
-                font-size: 1.15rem;
+                font-size: 1.4rem;
             }
             .origin-story {
                 margin-bottom: 60px;
@@ -833,13 +848,15 @@
             .origin-story p {
                 font-size: 1.05rem;
                 margin-bottom: 20px;
+                line-height: 1.9;
             }
             .origin-story div[style*="padding: 24px"] {
-                padding: 20px !important;
-                margin: 24px 0 !important;
+                padding: 24px 20px !important;
+                margin: 28px 0 !important;
             }
             .origin-story div[style*="font-size: 1.35rem"] p {
-                font-size: 1.2rem !important;
+                font-size: 1.3rem !important;
+                line-height: 1.4 !important;
             }
             .who-this-is-for {
                 padding: 36px 24px;
@@ -870,8 +887,9 @@
                 margin-bottom: 16px;
             }
             .method-tagline {
-                font-size: 1.1rem;
+                font-size: 1.15rem;
                 margin-bottom: 40px;
+                font-style: normal;
             }
             .method-steps {
                 grid-template-columns: 1fr;
@@ -881,9 +899,9 @@
                 padding: 28px 20px;
             }
             .step-number {
-                width: 56px;
-                height: 56px;
-                font-size: 1.6rem;
+                width: 64px;
+                height: 64px;
+                font-size: 1.8rem;
             }
             .step-title {
                 font-size: 1.1rem;
@@ -925,6 +943,10 @@
                 flex-direction: column;
                 gap: 16px;
             }
+            .benefit-card:first-child {
+                background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+                border: 2px solid #14b8a6;
+            }
             .benefit-icon {
                 width: 32px;
                 height: 32px;
@@ -933,7 +955,8 @@
                 font-size: 1rem;
             }
             .benefit-content span {
-                font-size: 0.95rem;
+                font-size: 1rem;
+                line-height: 1.6;
             }
             .benefit-badge {
                 font-size: 0.65rem;
@@ -960,12 +983,13 @@
             .faq-answer {
                 font-size: 0.95rem;
             }
-            .faq-item:nth-child(4) {
-                padding: 16px 16px 16px 52px;
-                margin-left: -10px;
-                margin-right: -10px;
+            .faq-item:nth-child(3) {
+                padding: 20px 20px 20px 56px;
+                margin-left: -16px;
+                margin-right: -16px;
+                border-left: 6px solid #14b8a6;
             }
-            .faq-item:nth-child(4) .faq-icon {
+            .faq-item:nth-child(3) .faq-icon {
                 left: 16px;
             }
             .urgency-banner {
@@ -975,6 +999,46 @@
             .urgency-banner h4 {
                 font-size: 1.35rem;
                 margin-bottom: 12px;
+            }
+            .urgency-banner p {
+                font-size: 1.05rem;
+                line-height: 1.8;
+            }
+            .final-cta-section {
+                padding: 48px 24px 80px;
+                margin-bottom: 40px;
+            }
+            .final-cta-section h2 {
+                font-size: 2rem;
+                margin-bottom: 16px;
+            }
+            .final-cta-section p {
+                font-size: 1.05rem;
+                margin-bottom: 28px;
+            }
+            .final-cta-benefits {
+                gap: 20px;
+                margin-bottom: 28px;
+            }
+            .final-cta-benefit {
+                font-size: 0.9rem;
+            }
+            .ps-note {
+                font-size: 1rem;
+                margin-top: 20px;
+            }
+            .footer {
+                padding: 32px 20px;
+            }
+            .footer-links {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+            .footer-links a {
+                margin: 0;
+            }
+        }
             }
             .urgency-banner p {
                 font-size: 1rem;
@@ -1029,7 +1093,9 @@
 
         @media (max-width: 480px) {
             .headline {
-                font-size: 2.2rem;
+                font-size: 2.75rem;
+                line-height: 1.15;
+                letter-spacing: -0.03em;
             }
             .sub-headline {
                 font-size: 1.1rem;
@@ -1054,12 +1120,110 @@
                 padding: 28px 24px;
             }
             .step-number {
-                width: 56px;
-                height: 56px;
-                font-size: 1.65rem;
+                width: 64px;
+                height: 64px;
+                font-size: 1.8rem;
             }
             .faq-section {
                 padding: 32px 24px;
+            }
+            .trust-badges {
+                flex-direction: column;
+                gap: 12px;
+                align-items: stretch;
+            }
+            
+            .trust-badge {
+                width: 100%;
+                padding: 12px 20px;
+                font-size: 0.95rem;
+                justify-content: center;
+            }
+        }
+
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+            padding: 20px 24px;
+            min-height: 64px;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            animation: pulse 2s infinite;
+            display: none;
+        }
+
+        .sticky-cta.visible {
+            transform: translateY(0);
+            display: block;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 -4px 12px rgba(244, 63, 94, 0.3); }
+            50% { box-shadow: 0 -4px 20px rgba(244, 63, 94, 0.6); }
+        }
+        
+        .sticky-cta a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+        .sticky-badge {
+            position: absolute;
+            top: -8px;
+            right: 20px;
+            background: #fbbf24;
+            color: #0f172a;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background: #14b8a6;
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 999;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        @media (min-width: 769px) {
+            .sticky-cta {
+                display: none !important;
+            }
+            .back-to-top {
+                display: none !important;
             }
         }
     </style>
@@ -1067,44 +1231,35 @@
 <body>
     <div class="container">
         <div class="hero-section">
-            <div class="pre-header">Find Your First Commission Product This Weekend</div>
+            <div class="pre-header">Replace Your Salary Without Creating a Single Product</div>
             
             <h1 class="headline">
-                Generate <span class="headline-accent">$5K/Month</span> in Recurring Commissions While Working 2 Hours a Week
+                How a Burnt-Out Nurse Replaced a <span class="headline-accent">$92K Salary</span> in 8 Months (Working 2 Hours a Week)
             </h1>
             
             <h2 class="sub-headline">
-                After 2 years of trial and error, I replaced my nursing income by promoting products that pay recurring commissions. 2 hours a week. No product creation. No expertise required.
+                You've seen the passive income promises. Most are hype. Here's what actually worked: I promoted products that pay me every month. No expertise. No creating. Just 2 hours a week. I replaced my $92K salary in 8 months.
             </h2>
 
             <a href="https://icc-d404ff.circle.so/join?invitation_token=8c8667fc5b45772034596b6eb21a7922db3e5439-3d7d510f-a427-4c06-bd7a-57ba6906d777" class="cta-button" target="_blank">
-                Get The Product Selection System Free →
+                Join the Priority List (Get the Formula Free) →
             </a>
 
-            <div class="trust-line">Free to join • Get instant access to the Product Selection System • Course opens October 2025</div>
+            <div class="trust-line">Free to join • Instant access to the Formula • 70% discount locked in for founding members</div>
 
             <div class="trust-badges">
                 <div class="trust-badge">
-                    <span class="trust-badge-icon">🎓</span>
-                    <span>$880B Market</span>
+                    <span class="trust-badge-icon">❌</span>
+                    <span>No Product Creation</span>
                 </div>
                 <div class="trust-badge">
                     <span class="trust-badge-icon">💰</span>
-                    <span>Recurring Income</span>
+                    <span>Recurring Commissions</span>
                 </div>
                 <div class="trust-badge">
                     <span class="trust-badge-icon">⏰</span>
                     <span>2 Hours/Week</span>
                 </div>
-            </div>
-        </div>
-
-        <div class="market-opportunity-section">
-            <div class="market-badge">Why Now Is The Perfect Time</div>
-            <div class="market-content">
-                <p><strong>The online education market hit $325 billion in 2024 and is projected to nearly triple to $880 billion by 2033.</strong> Meanwhile, 80% of brands now use affiliate programs to grow.</p>
-                
-                <p>You can tap into this massive market by promoting existing products that pay recurring monthly commissions with zero product creation or customer support. One sale = monthly payments that compound while you sleep.</p>
             </div>
         </div>
 
@@ -1151,6 +1306,17 @@
             }
         </style>
 
+        <div class="market-opportunity-section">
+            <div class="market-badge">Why Recurring Commissions Change Everything</div>
+            <div class="market-content">
+                <p>Most affiliates promote products for one-time commissions. They earn $50 and start over. Here's what changes when you focus on recurring commissions:</p>
+                
+                <p>One customer subscribing to a $47/month product = $564/year from a single sale. Ten customers = $5,640/year in passive income. One hundred customers = $56,400/year.</p>
+
+                <p>The online education market hit $325 billion in 2024 and is growing to $880 billion by 2033. 80% of brands now use affiliate programs. You can tap into this by promoting products that pay you monthly. No product creation, no customer support. Just recurring payments that compound while you sleep.</p>
+            </div>
+        </div>
+
         <div class="story-visual">
             <div class="story-container">
                 <div class="story-grid">
@@ -1158,16 +1324,16 @@
                         <svg class="story-icon" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
                         </svg>
-                        <div class="story-label">How I Used To Think</div>
-                        <p class="story-text">Create a course. Build for 6 months. Launch to crickets. Need credentials people trust. Handle all customer questions. Chase new sales every month. One payment per customer.<span class="highlight">Exhausting.</span></p>
+                        <div class="story-label">The Old Way</div>
+                        <p class="story-text">To earn online income, I needed to create something. Build a product. Build an audience. Launch and hope people buy. Handle every question. Chase new sales every month. One customer = one payment.<span class="highlight">Exhausting.</span></p>
                     </div>
                     
                     <div class="story-box new-story">
                         <svg class="story-icon" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
                         </svg>
-                        <div class="story-label">What I Discovered Instead</div>
-                        <p class="story-text">Find proven products already selling. Connect people once. Get paid every month they stay subscribed. No product creation. No customer support. Income compounds automatically while I sleep. One connection = months of passive payments.<span class="highlight">Freedom.</span></p>
+                        <div class="story-label">What Actually Works</div>
+                        <p class="story-text">Find products already selling. Connect people once. Collect payments every month they stay subscribed. No product creation. No customer support. Income compounds while I sleep. One connection = months of recurring payments.<span class="highlight">Freedom.</span></p>
                     </div>
                 </div>
             </div>
@@ -1176,31 +1342,37 @@
         <div class="origin-story">
             <div class="origin-story-label">From Burnt-Out Nurse To $18K/Month</div>
             
-            <p>My name is Mike Marino. Two years ago, I was a psychiatric nurse working brutal 12-hour shifts with patients in crisis: delusions, psychosis, constant high-alert situations. Completely exhausted.</p>
+            <p>Two years ago, I was a psychiatric nurse working brutal 12-hour shifts with patients in crisis: delusions, psychosis, constant high-alert situations. Completely exhausted.</p>
             
-            <p>While still working as a nurse, I started building this side income with one clear goal: build income without sacrificing the little free time I had. I needed something that took <em>just 2 hours a week</em> and kept paying me even when I wasn't working. Everything I tried required either massive time investment or expertise I didn't have. Until I promoted someone else's $47/month course and realized: I just got paid for one sale. And I'd get paid again next month. And the month after that. That's when it clicked.</p>
+            <p>I was desperate for a way out. But I couldn't quit. I had bills, a family, responsibilities. So I started looking for something I could build on the side. Something that wouldn't eat up the little free time I had left.</p>
+            
+            <p>I tried dropshipping products from China, but it was way more complicated than they promised. I chased random "make money online" opportunities. Big promises, little results, zero support. Everything either required expertise I didn't have or turned out to be complete BS.</p>
+            
+            <p>Then I discovered something different: a company with a low-ticket product. Just $7. I didn't need to convince anyone. They did all the selling. I just connected people to the offer.</p>
+            
+            <p>Here's what I didn't realize at first: that $7 product was a gateway. Once someone bought, the company upsold them into recurring monthly programs and high-ticket offers. I promoted one tiny $7 product and earned recurring <em>and</em> high-ticket commissions from the same customer.</p>
             
             <div style="margin: 32px 0; padding: 24px; background: rgba(255, 255, 255, 0.5); border-left: 4px solid #f43f5e; border-radius: 8px;">
                 <p style="font-size: 1.35rem; font-weight: 700; color: #0f172a; margin: 0; line-height: 1.5; font-style: italic;">"I made one connection, and got paid month after month."</p>
             </div>
             
-            <p>Within 8 months, my recurring income replaced my $92K nursing salary. I've had months where I brought in over <strong>$18K</strong>, support my wife and 1-year-old son, and I still pick up nursing shifts when I want to, never when I have to. Complete control over my schedule.</p>
+            <p>Within 8 months, my recurring income replaced my $92K nursing salary. I've had months where I earned over <strong>$18K</strong>. Enough to support my wife and 1-year-old son comfortably. I still pick up nursing shifts, but now it's by choice, not necessity.</p>
         </div>
 
         <div class="who-this-is-for">
             <h4>This Is For You If:</h4>
             <ul>
                 <li>You'd rather earn $5K/month repeatedly than $5K once and start over</li>
-                <li>You have a full-time job and need something that fits around your schedule</li>
-                <li>You want to stop trading hours for dollars and build income that grows while you sleep</li>
-                <li>You can commit 2 hours a week consistently (first commission possible within days, meaningful income in 3-6 months)</li>
+                <li>You're working full-time and need something that won't consume your nights and weekends</li>
+                <li>You're tired of your income disappearing the moment you stop working</li>
+                <li>You can commit 2 hours a week consistently</li>
             </ul>
 
             <div class="not-for">
                 <p><strong>This Is NOT For You If:</strong></p>
                 <ul>
-                    <li>You're looking for push-button passive income with zero effort. This requires consistent 2-hour weeks and following a proven system.</li>
-                    <li>You need guaranteed income next week. This is a business, not a lottery ticket.</li>
+                    <li>You're looking for guaranteed income with zero effort or time commitment</li>
+                    <li>You need guaranteed income this week (first commissions can come within days, but meaningful income requires consistent effort over 3-6 months)</li>
                 </ul>
             </div>
         </div>
@@ -1216,7 +1388,7 @@
                         <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
                     </svg>
                     <div class="step-title">Find</div>
-                    <p class="step-desc">Use my 7-point Product Selection System to identify digital courses and info products with recurring commissions. You'll know within 48 hours if a product is worth promoting (without guessing or wasting time on duds).</p>
+                    <p class="step-desc">Use my 7-point Product Selection Formula to identify digital courses and info products with recurring commissions. You'll know within 48 hours if a product is worth promoting. No more guessing or wasting time on duds.</p>
                 </div>
                 <div class="method-step">
                     <div class="step-number">2</div>
@@ -1224,7 +1396,7 @@
                         <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"/>
                     </svg>
                     <div class="step-title">Connect</div>
-                    <p class="step-desc">Put the right solution in front of people actively searching for it. There's an art to this, and once you learn it, everything changes. The course shows you exactly how.</p>
+                    <p class="step-desc">Connect the right people to the right products. I'll show you where buyers are already searching and how to position yourself there. No cold pitching. No awkward sales conversations. Just strategic positioning that generates recurring commissions.</p>
                 </div>
                 <div class="method-step">
                     <div class="step-number">3</div>
@@ -1236,54 +1408,51 @@
                 </div>
             </div>
             <div style="text-align: center; margin-top: 32px; padding: 24px; background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-radius: 12px; border: 2px solid #bbf7d0;">
-                <p style="font-size: 1.05rem; color: #15803d; font-weight: 600; margin: 0;">Inside the course: Get the complete framework, templates, real examples, and watch over my shoulder as I find and promote products that convert</p>
+                <p style="font-size: 1.05rem; color: #15803d; font-weight: 600; margin: 0;">You don't need to be an expert. You don't need thousands of followers. You just need to follow the system and put in consistent 2-hour weeks.</p>
             </div>
         </div>
 
         <div class="benefits-section">
-            <h3>Get Early Access + Founding Member Benefits</h3>
-            <p class="benefits-intro">After coaching 70+ people one-on-one, I'm opening this to founding members. Join the priority list to lock in these benefits:</p>
+            <h3>Lock In These Founding Member Benefits</h3>
+            <p class="benefits-intro">After coaching 70+ people one-on-one to build recurring income, I'm opening the full system to founding members. Join the priority list now to lock in lifetime access at 70% off plus these exclusive bonuses:</p>
             
             <div class="benefits-showcase">
-                <h4>Lock In These Founding Member Benefits:</h4>
+                <h4>Founding Member Benefits:</h4>
                 <div class="benefits-grid">
                     <div class="benefit-card">
                         <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
                         </svg>
-                        <div class="benefit-content">
-                            <div class="benefit-header">
-                                <strong>The Product Selection System</strong>
-                                <span class="benefit-badge">Instant Access</span>
-                            </div>
-                            <span>Identify your first high-converting product within 48 hours using my 7-point criteria. No more guessing which products are worth your time.</span>
+                        <div class="benefit-text">
+                            <strong>The Product Selection Formula</strong>
+                            <span>My 7-point formula helps you evaluate any product in under 10 minutes. Within 48 hours, you'll have your first winner identified. No more analysis paralysis. No more wasting time on products that don't convert. Just clarity and confidence.</span>
                         </div>
                     </div>
                     <div class="benefit-card">
                         <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
-                        <div class="benefit-content">
+                        <div class="benefit-text">
                             <strong>70% Founding Member Discount</strong>
-                            <span>Lock in the lowest price before public launch. This discount disappears once doors open in October 2025.</span>
+                            <span>Lock in 70% off before the public launch in November 2025. After that, you'll pay full price, or you'll still be stuck trading hours for dollars. This is your chance to get in at the lowest price and start building recurring income now.</span>
                         </div>
                     </div>
                     <div class="benefit-card">
                         <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                         </svg>
-                        <div class="benefit-content">
+                        <div class="benefit-text">
                             <strong>Complete Framework & Templates</strong>
-                            <span>The exact step-by-step system I use, including templates and real examples. Nothing to figure out, just follow the blueprint.</span>
+                            <span>Get my complete framework for finding, promoting, and earning from recurring products. Includes email templates, product analysis worksheets, and real case studies showing exactly what works. No guessing. No reinventing the wheel. Just copy what's already proven.</span>
                         </div>
                     </div>
                     <div class="benefit-card">
                         <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
                         </svg>
-                        <div class="benefit-content">
+                        <div class="benefit-text">
                             <strong>Private Community Access</strong>
-                            <span>Ask me questions directly, get feedback on your products and promotions, and connect with others building recurring income alongside you.</span>
+                            <span>Get direct access to me and a community of people building recurring income. Post your product picks and get feedback before you promote. Ask questions and get answers from people who've been where you are. You're not figuring this out alone.</span>
                         </div>
                     </div>
                 </div>
@@ -1291,48 +1460,42 @@
         </div>
 
         <div class="faq-section">
-            <h4>Frequently Asked Questions</h4>
+            <h4>Your Questions Answered</h4>
             
             <div class="faq-item">
                 <div class="faq-icon">🗓️</div>
                 <p class="faq-question">When does the course launch?</p>
-                <p class="faq-answer">October 2025. Join now to get instant access to the Product Selection System and lock in the lowest price.</p>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-icon">⚙️</div>
-                <p class="faq-question">Do I need a website?</p>
-                <p class="faq-answer">You have options. Some methods need a simple website (under $50/year to set up), others don't. I'll show you both approaches so you can choose what fits your situation.</p>
+                <p class="faq-answer">November 2025. But you don't have to wait. Join the priority list now and get instant access to the Product Selection Formula so you can start finding products this weekend. Plus, you'll lock in 70% off before the public launch.</p>
             </div>
 
             <div class="faq-item">
                 <div class="faq-icon">👥</div>
                 <p class="faq-question">What if I don't have an audience?</p>
-                <p class="faq-answer">You don't need one. The strategy focuses on connecting with people who are already searching for solutions. I started with zero followers.</p>
+                <p class="faq-answer">You don't need one. The strategy focuses on connecting with people who are already searching for solutions. You're not building a following first and then monetizing. You're positioning yourself where buyers already are. I started with zero followers and still don't rely on social media for most of my income.</p>
             </div>
 
             <div class="faq-item">
                 <div class="faq-icon">⏱️</div>
                 <p class="faq-question">How long until I see results?</p>
-                <p class="faq-answer">Your first commission can come fast. Some students within 48 hours, many within 7-14 days.<br><br>Building significant income takes longer. Getting to $3-5K/month typically takes 3-6 months of consistent 2-hour weeks. I replaced my $92K nursing salary in 8 months. This compounds over time: the work you do now pays you monthly for months or years to come.</p>
+                <p class="faq-answer">Your first commission can come fast. Some students within 48 hours, many within 7-14 days. Building significant income takes longer. Getting to $3-5K/month typically takes 3-6 months of consistent 2-hour weeks. I replaced my $92K nursing salary in 8 months. This compounds over time. The connections you make this month keep paying you next month, and the month after, and the month after that.</p>
             </div>
 
             <div class="faq-item">
                 <div class="faq-icon">💰</div>
                 <p class="faq-question">Is this just affiliate marketing?</p>
-                <p class="faq-answer">Yes, but with a game-changing difference: we focus primarily on recurring commission products. Traditional affiliates earn once per sale and start over. You earn monthly from each sale. One customer paying $50/month = $600/year from a single sale. That's the power of recurring commissions.</p>
+                <p class="faq-answer">Yes, but with one critical difference: recurring commissions. Traditional affiliates earn once per sale and start over. You earn every month from each sale. One customer paying $50/month = $600/year from a single connection. That's the power of recurring income.</p>
             </div>
 
             <div class="faq-item">
                 <div class="faq-icon">🎯</div>
                 <p class="faq-question">Isn't recurring affiliate marketing saturated?</p>
-                <p class="faq-answer">Most affiliates focus on one-time commissions because they don't understand the compounding power. Recurring products are actually LESS saturated because affiliates think $20-50/month per customer is 'too small.' But 100 customers at $40/month = $4,000/month that doesn't disappear. That's the difference.</p>
+                <p class="faq-answer">Here's what most people miss: 80% of affiliates chase one-time commissions because they think $20-50/month per customer is 'too small.' That's exactly why recurring products are LESS saturated. But 100 customers at $40/month = $4,000/month that doesn't disappear. That's the leverage most affiliates ignore.</p>
             </div>
 
             <div class="faq-item">
                 <div class="faq-icon">🔍</div>
                 <p class="faq-question">What if I'm in a weird niche?</p>
-                <p class="faq-answer">As long as there are digital products with recurring pricing in your niche, this works. The Product Selection System (free bonus) shows you how to evaluate your niche.</p>
+                <p class="faq-answer">If there are digital products with recurring pricing in your niche, this works. The Product Selection Formula shows you exactly how to evaluate whether your niche has enough opportunity. And if you're not sure what niche to focus on, I'll show you how to pick one with the most potential.</p>
             </div>
 
             <div class="faq-item">
@@ -1343,14 +1506,13 @@
         </div>
 
         <div class="urgency-banner">
-            <h4>Founding Member Pricing Ends Soon</h4>
-            <p>The 70% founding member discount and Product Selection System bonus are only for early members. After launch, the Product Selection System will be sold separately for $297, and the course will be full price. <strong>Lock in your discount before doors open in October 2025.</strong></p>
+            <h4>This 70% Discount Disappears in November 2025</h4>
+            <p>Right now, you're still trading hours for dollars. Every week you wait is another week you could have been building recurring income. The 70% founding member discount and the Product Selection Formula (worth $297) are only available to early members. After November 2025, you'll pay full price, or you'll still be stuck in the same cycle. <strong>Join now and start building your recurring income this month.</strong></p>
         </div>
 
         <div class="final-cta-section">
             <h2>Ready to Build Your Recurring Income?</h2>
-            <p>Stop trading time for money. Join free and get instant access to the Product Selection System. Identify your first product this weekend and lock in 70% off before October 2025.</p>
-
+            <p>Stop trading time for money. Join free and get instant access to the Product Selection Formula. Identify your first product this weekend and lock in 70% off before November 2025.</p>
             <div class="final-cta-benefits">
                 <div class="final-cta-benefit">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -1373,7 +1535,7 @@
             </div>
 
             <a href="https://icc-d404ff.circle.so/join?invitation_token=8c8667fc5b45772034596b6eb21a7922db3e5439-3d7d510f-a427-4c06-bd7a-57ba6906d777" class="cta-button" target="_blank">
-                Get The Product Selection System Free →
+                Get The Product Selection Formula Free →
             </a>
 
             <div class="trust-line" style="margin-top: 16px;">No credit card required • Instant access to bonus • Zero obligation</div>
@@ -1389,5 +1551,28 @@
             </div>
         </div>
     </div>
+
+    <div class="sticky-cta">
+        <span class="sticky-badge">INSTANT ACCESS</span>
+        <a href="https://icc-d404ff.circle.so/join?invitation_token=8c8667fc5b45772034596b6eb21a7922db3e5439-3d7d510f-a427-4c06-bd7a-57ba6906d777">✓ Get the Formula Free →</a>
+    </div>
+
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const stickyBtn = document.querySelector('.sticky-cta');
+            const backToTop = document.querySelector('.back-to-top');
+            const scrollPos = window.scrollY;
+            
+            if (scrollPos > 800) {
+                stickyBtn.classList.add('visible');
+                backToTop.classList.add('visible');
+            } else {
+                stickyBtn.classList.remove('visible');
+                backToTop.classList.remove('visible');
+            }
+        });
+    </script>
 </body>
 </html>
