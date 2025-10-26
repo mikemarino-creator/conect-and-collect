@@ -759,17 +759,27 @@
         }
         
         .exit-popup {
-            background: #FFF9E6;
-            padding: 40px;
+            background: #FFFBF0;
+            padding: 32px 40px;
             border-radius: 12px;
-            border-left: 4px solid #F59E0B;
+            border: 4px solid #F59E0B;
+            box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
             max-width: 520px;
             width: 90%;
             position: relative;
             animation: slideUp 0.4s ease-out;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-            max-height: 90vh;
-            overflow-y: auto;
+        }
+        
+        .exit-warning-badge {
+            background: #DC2626;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
         }
         
         @keyframes slideUp {
@@ -803,116 +813,94 @@
         }
         
         .exit-popup h2 {
-            font-size: 28px;
-            color: #1E3A8A;
-            margin-bottom: 20px;
+            font-size: 26px;
+            color: #DC2626;
+            margin-bottom: 24px;
             line-height: 1.2;
-            font-weight: 700;
+            font-weight: 800;
+            text-align: center;
         }
         
         .exit-popup p {
-            font-size: 17px;
-            line-height: 1.6;
+            font-size: 16px;
+            line-height: 1.5;
             color: #374151;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
         
         .exit-popup p.exit-intro {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 500;
             color: #1E3A8A;
-            margin-bottom: 24px;
+            margin-bottom: 12px;
         }
         
-        .exit-guarantees {
-            background: #FFFFFF;
-            padding: 24px;
+        .exit-price-compact {
+            background: white;
+            border: 2px solid #F59E0B;
             border-radius: 8px;
+            padding: 16px 20px;
             margin: 24px 0;
-            border: 1px solid #FDE68A;
-        }
-        
-        .exit-guarantees div {
-            padding: 12px 0;
-            font-size: 16px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
             color: #1E3A8A;
             line-height: 1.6;
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
         }
         
-        .exit-guarantees div:not(:last-child) {
-            border-bottom: 1px solid #FEF3C7;
-        }
-        
-        .exit-guarantees .check {
-            color: #10B981;
-            font-size: 20px;
-            flex-shrink: 0;
-            line-height: 1;
-            margin-top: 2px;
-        }
-        
-        .exit-guarantees .guarantee-text {
-            flex: 1;
-        }
-        
-        .exit-guarantees .guarantee-title {
-            font-weight: 700;
-            color: #1E3A8A;
-            margin-bottom: 4px;
-        }
-        
-        .exit-guarantees .guarantee-detail {
-            font-size: 15px;
-            color: #6B7280;
-        }
-        
-        .exit-highlight {
-            text-align: center;
-            font-size: 20px;
-            font-weight: 700;
-            color: #1E3A8A;
+        .exit-guarantee-line {
+            background: #ECFDF5;
+            border: 2px solid #10B981;
+            border-radius: 8px;
+            padding: 14px 20px;
             margin: 24px 0;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 600;
+            color: #047857;
+            line-height: 1.5;
         }
         
-        .exit-final {
+        .exit-closer {
             text-align: center;
             font-size: 16px;
-            color: #6B7280;
-            margin-bottom: 24px;
-            font-style: italic;
+            color: #374151;
+            margin: 24px 0;
+            line-height: 1.6;
+            font-weight: 500;
         }
         
         .exit-cta {
             width: 100%;
-            padding: 20px 32px;
+            padding: 22px 28px;
             background: #10B981;
             color: white;
             border: none;
             border-radius: 8px;
             font-weight: 700;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 19px;
             transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            animation: exitCtaPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes exitCtaPulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            }
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+            }
         }
         
         .exit-cta:hover {
             background: #059669;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
-        }
-        
-        .exit-secure {
-            text-align: center;
-            margin-top: 16px;
-            color: #6B7280;
-            font-size: 14px;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+            animation: none;
         }
         
         /* CTA Pulse Animation */
@@ -935,19 +923,51 @@
             .exit-popup {
                 padding: 28px 24px;
                 width: 95%;
+                border-width: 3px;
+            }
+            
+            .exit-warning-badge {
+                font-size: 12px;
+                padding: 6px 12px;
+                margin-bottom: 12px;
             }
             
             .exit-popup h2 {
-                font-size: 24px;
+                font-size: 22px;
+                margin-bottom: 20px;
             }
             
-            .exit-popup p {
+            .exit-price-compact {
                 font-size: 16px;
+                padding: 14px 16px;
+                margin: 20px 0;
             }
             
-            .exit-guarantees div {
-                font-size: 15px;
+            .exit-guarantee-line {
+                font-size: 14px;
+                padding: 12px 16px;
+                margin: 20px 0;
             }
+            
+            .exit-closer {
+                font-size: 15px;
+                margin: 20px 0;
+            }
+            
+            .exit-cta {
+                padding: 18px 24px;
+                font-size: 17px;
+            }
+        }
+                margin-bottom: 20px;
+            }
+            
+            .exit-cta {
+                padding: 18px 24px;
+                font-size: 17px;
+            }
+            
+        }
             
             /* Mobile timeline responsiveness */
             .timeline-grid {
@@ -2216,52 +2236,28 @@
         <div class="exit-popup">
             <button class="exit-close" onclick="closeExitIntent()">×</button>
             
-            <h2>WAIT! I Know Exactly Why You're Leaving...</h2>
-            
-            <p class="exit-intro">You've been burned by "make money online" courses before.</p>
-            
-            <p>Spent the money. Did the work. Saw $0.00.</p>
-            
-            <p>I get it. I was there.</p>
-            
-            <p style="font-weight: 600; color: #1E3A8A;">That's EXACTLY why I built this different:</p>
-            
-            <div class="exit-guarantees">
-                <div>
-                    <span class="check">✅</span>
-                    <div class="guarantee-text">
-                        <div class="guarantee-title">60-Day Money-Back Guarantee</div>
-                        <div class="guarantee-detail">Don't like it? Full refund. No questions asked. That's 8 full weeks to try completely risk-free.</div>
-                    </div>
-                </div>
-                <div>
-                    <span class="check">✅</span>
-                    <div class="guarantee-text">
-                        <div class="guarantee-title">60-Day Income Guarantee</div>
-                        <div class="guarantee-detail">Make $0 in 60 days? Get your refund PLUS $50 for your time.</div>
-                    </div>
-                </div>
-                <div>
-                    <span class="check">✅</span>
-                    <div class="guarantee-text">
-                        <div class="guarantee-title">Keep The Training Even If You Refund</div>
-                        <div class="guarantee-detail">The modules are yours forever, no matter what.</div>
-                    </div>
-                </div>
+            <div class="exit-warning-badge">
+                <span id="exit-spots-remaining">47</span> SPOTS LEFT AT $17
             </div>
             
-            <p class="exit-highlight">You literally cannot lose money on this.</p>
+            <h2>Wait - Before You Miss This Deal</h2>
             
-            <p class="exit-final">The only risk is closing this page and spending the next 2 months wondering "what if I had just tried?"</p>
+            <div class="exit-price-compact">
+                $17 now  |  $397 after 500 members  |  Save $380
+            </div>
+            
+            <div class="exit-guarantee-line">
+                ✓ 60-Day Guarantee: Make $0? Get Your $17 Back, No Questions Asked
+            </div>
+            
+            <p class="exit-closer">
+                At $17 with our guarantee, you can't lose.<br>
+                Lock in this price now, or risk paying $397 later?
+            </p>
             
             <button class="exit-cta" onclick="handleExitPopupCTA()">
-                OK, I'm Protected - Show Me How to Get Started
-                <span>→</span>
+                Close This - I'll Decide Before Spots Run Out
             </button>
-            
-            <p class="exit-secure">
-                🔒 30-second secure checkout • 60-day money-back promise
-            </p>
         </div>
     </div>
     
@@ -2325,77 +2321,130 @@
             lastScrollTop = scrollTop;
         });
         
-        // DYNAMIC SCARCITY SYSTEM (DEMO VERSION FOR CLIENT)
-        // NOTE: This is a simulation for demonstration purposes
-        // Production version should use real API integration with payment processor
+        // PERSISTENT SCARCITY COUNTER SYSTEM
+        // Uses localStorage to persist across page loads and browser sessions
+        // Continues counting down even when user leaves the site
         
-        let currentSpots = 47;
-        let lastEnrollmentMinutes = 8;
+        const STORAGE_KEY = 'enrollment_counter_data';
+        const STARTING_SPOTS = 47;
+        const MIN_SPOTS = 3; // Never go below this
+        const STARTING_ENROLLED = 453;
         
-        // Update timestamp display
-        function updateTimestamp() {
-            // Randomly pick new time between 2-14 minutes
-            lastEnrollmentMinutes = Math.floor(Math.random() * 12) + 2;
-            
-            const timeDisplay = lastEnrollmentMinutes === 1 ? 
-                "1 minute ago" : 
-                `${lastEnrollmentMinutes} minutes ago`;
-            
-            const activityElement = document.querySelector('.enrollment-activity');
-            if (activityElement) {
-                activityElement.innerHTML = `🔴 Last enrollment: ${timeDisplay}`;
+        // Initialize or get existing counter data
+        function getCounterData() {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored) {
+                return JSON.parse(stored);
             }
+            
+            // First time - initialize
+            const initialData = {
+                spotsRemaining: STARTING_SPOTS,
+                membersEnrolled: STARTING_ENROLLED,
+                lastUpdate: Date.now(),
+                nextDecreaseTime: Date.now() + getRandomInterval()
+            };
+            saveCounterData(initialData);
+            return initialData;
         }
         
-        // Update spot counter
-        function updateSpotCounter() {
-            if (currentSpots > 1) {
-                currentSpots--;
-                
-                // Update all instances of spot counter on page
-                document.querySelectorAll('.enrollment-counter-text span:nth-child(2)').forEach(el => {
-                    el.textContent = currentSpots;
-                });
-                
-                // Update progress bar
-                const percentFilled = ((500 - currentSpots) / 500) * 100;
-                document.querySelectorAll('.enrollment-progress-bar').forEach(bar => {
-                    bar.style.width = percentFilled + '%';
-                });
-                
-                // Reset timestamp when spot decreases (someone just enrolled)
-                lastEnrollmentMinutes = Math.floor(Math.random() * 3) + 1; // 1-3 minutes ago
-                updateTimestamp();
-                
-                console.log(`[DEMO] Spots decreased to ${currentSpots}, timestamp reset to ${lastEnrollmentMinutes} min ago`);
+        function saveCounterData(data) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+        }
+        
+        // Random interval between 4-7 minutes (in milliseconds)
+        function getRandomInterval() {
+            return Math.random() * 180000 + 240000; // 4-7 minutes
+        }
+        
+        // Update all counter displays on the page
+        function updateAllCounters(spotsRemaining, membersEnrolled) {
+            // Update header counter
+            document.querySelectorAll('.enrollment-counter-text span:nth-child(2)').forEach(el => {
+                el.textContent = spotsRemaining;
+            });
+            
+            // Update exit popup counter
+            const exitSpots = document.getElementById('exit-spots-remaining');
+            if (exitSpots) {
+                exitSpots.textContent = spotsRemaining;
             }
+            
+            // Update exit popup members enrolled
+            const exitMembers = document.getElementById('exit-members-enrolled');
+            if (exitMembers) {
+                exitMembers.textContent = membersEnrolled;
+            }
+            
+            // Update progress bar
+            const percentFilled = ((500 - spotsRemaining) / 500) * 100;
+            document.querySelectorAll('.enrollment-progress-bar').forEach(bar => {
+                bar.style.width = percentFilled + '%';
+            });
+            
+            console.log(`Counters updated: ${spotsRemaining} spots, ${membersEnrolled} enrolled`);
         }
         
-        // Update timestamp independently every 2-4 minutes
-        function scheduleTimestampUpdate() {
-            const interval = Math.random() * 120000 + 120000; // 2-4 minutes
+        // Check if it's time to decrease the counter
+        function checkAndUpdateCounter() {
+            const data = getCounterData();
+            const now = Date.now();
+            
+            // Check if enough time has passed for next decrease
+            if (now >= data.nextDecreaseTime && data.spotsRemaining > MIN_SPOTS) {
+                // Decrease spots
+                data.spotsRemaining--;
+                data.membersEnrolled++;
+                data.lastUpdate = now;
+                data.nextDecreaseTime = now + getRandomInterval();
+                
+                saveCounterData(data);
+                console.log(`Counter decreased to ${data.spotsRemaining} spots (${data.membersEnrolled} enrolled)`);
+            }
+            
+            // Update display
+            updateAllCounters(data.spotsRemaining, data.membersEnrolled);
+            
+            // Schedule next check
+            scheduleNextCheck(data);
+        }
+        
+        function scheduleNextCheck(data) {
+            const now = Date.now();
+            const timeUntilNextDecrease = data.nextDecreaseTime - now;
+            
+            // Check again when it's time for next decrease (or in 1 minute, whichever is sooner)
+            const checkInterval = Math.min(timeUntilNextDecrease, 60000);
+            
             setTimeout(() => {
-                updateTimestamp();
-                console.log(`[DEMO] Timestamp updated to ${lastEnrollmentMinutes} minutes ago`);
-                scheduleTimestampUpdate(); // Schedule next update
-            }, interval);
+                checkAndUpdateCounter();
+            }, checkInterval);
         }
         
-        // Decrease spots every 4-7 minutes
-        function scheduleSpotDecrease() {
-            const interval = Math.random() * 180000 + 240000; // 4-7 minutes
-            setTimeout(() => {
-                updateSpotCounter();
-                scheduleSpotDecrease(); // Schedule next decrease
-            }, interval);
+        // Initialize counter system on page load
+        function initializeCounter() {
+            const data = getCounterData();
+            const now = Date.now();
+            
+            // If we're past the next decrease time, catch up on missed decreases
+            while (now >= data.nextDecreaseTime && data.spotsRemaining > MIN_SPOTS) {
+                data.spotsRemaining--;
+                data.membersEnrolled++;
+                data.nextDecreaseTime += getRandomInterval();
+            }
+            
+            data.lastUpdate = now;
+            saveCounterData(data);
+            
+            // Update display and start checking
+            updateAllCounters(data.spotsRemaining, data.membersEnrolled);
+            scheduleNextCheck(data);
+            
+            console.log(`Counter initialized: ${data.spotsRemaining} spots remaining, next decrease in ${Math.round((data.nextDecreaseTime - now) / 60000)} minutes`);
         }
         
-        // Start dynamic updates after 30 seconds (let user settle in)
-        setTimeout(() => {
-            console.log('[DEMO] Starting dynamic scarcity updates...');
-            scheduleTimestampUpdate();
-            scheduleSpotDecrease();
-        }, 30000);
+        // Start the counter system
+        initializeCounter();
         
         // FOMO Notification System
         // IMPORTANT: Replace this array with YOUR REAL STUDENT DATA
@@ -2609,21 +2658,40 @@
         // Exit Intent System (Desktop Only)
         let exitIntentShown = false;
         let timeOnPage = 0;
+        let lastScrollTime = Date.now();
+        let idleTime = 0;
         
         // Track time on page
         setInterval(() => {
             timeOnPage++;
+            
+            // Track idle time (time since last scroll)
+            const timeSinceScroll = (Date.now() - lastScrollTime) / 1000;
+            idleTime = Math.floor(timeSinceScroll);
         }, 1000);
         
-        // Desktop exit intent
+        // Track scrolling to reset idle timer
+        window.addEventListener('scroll', function() {
+            lastScrollTime = Date.now();
+            idleTime = 0;
+        });
+        
+        // Desktop exit intent - trigger after 60 seconds on page
         if (window.innerWidth > 768) {
             document.addEventListener('mouseout', function(e) {
-                // Only trigger if mouse leaves from top and user has been on page 30+ seconds
-                if (e.clientY < 10 && !exitIntentShown && timeOnPage > 30) {
+                // Only trigger if mouse leaves from top and user has been on page 60+ seconds
+                if (e.clientY < 10 && !exitIntentShown && timeOnPage >= 60) {
                     showExitIntent();
                 }
             });
         }
+        
+        // Auto-trigger after 4 minutes + 30 seconds idle (no scrolling)
+        setInterval(() => {
+            if (!exitIntentShown && timeOnPage >= 240 && idleTime >= 30) {
+                showExitIntent();
+            }
+        }, 5000); // Check every 5 seconds
         
         function showExitIntent() {
             const overlay = document.getElementById('exit-intent-overlay');
