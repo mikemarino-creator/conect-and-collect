@@ -903,6 +903,61 @@
             animation: none;
         }
         
+        /* Testimonial Boxes */
+        .testimonial-box {
+            background: #FFFBF0;
+            padding: 40px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-600);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        
+        .testimonial-content {
+            width: 100%;
+        }
+        
+        .testimonial-quote {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--neutral-700);
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            border-top: 2px solid var(--neutral-200);
+            padding-top: 16px;
+        }
+        
+        .testimonial-name {
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--primary-900);
+            margin-bottom: 4px;
+        }
+        
+        .testimonial-location {
+            font-size: 14px;
+            color: var(--neutral-600);
+            margin-bottom: 6px;
+        }
+        
+        .testimonial-context {
+            font-size: 14px;
+            color: var(--neutral-600);
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .testimonial-box {
+                padding: 28px 24px;
+            }
+            
+            .testimonial-quote {
+                font-size: 16px;
+            }
+        }
+        
         /* CTA Pulse Animation */
         @keyframes ctaPulse {
             0%, 100% {
@@ -984,6 +1039,13 @@
                 padding: 18px 24px;
             }
         }
+        
+        /* Disqualification Section Responsive */
+        @media (max-width: 768px) {
+            section div[style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1009,7 +1071,7 @@
                         🔴 Last enrollment: 8 minutes ago
                     </div>
                 </div>
-                <a href="#order" class="header-cta">Claim Your Spot</a>
+                <a href="#learn-more" class="header-cta">Claim Your Spot</a>
             </div>
         </div>
     </header>
@@ -1048,7 +1110,7 @@
                 <div><strong>✓ Make your first commission in 14 days</strong></div>
             </div>
             
-            <a href="#order" class="cta-button" style="background: #10B981; border-color: #059669;">Yes! Claim My Spot for $17 →</a>
+            <a href="#learn-more" class="cta-button" style="background: #10B981; border-color: #059669;">Get Instant Access - $17 →</a>
             
             <div class="trust-row">
                 <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -1180,7 +1242,7 @@
             <!-- AI MENTION #3: Showing how AI makes it EASIER -->
             <div style="background: var(--primary-50); padding: 48px; border-radius: 12px; margin: 48px auto; max-width: 800px; border: 3px solid var(--primary-600);">
                 <h3 style="text-align: center; font-size: 28px; color: var(--primary-900); margin-bottom: 24px;">
-                    But Here's Where It Gets Even Better:
+                    So How Do You Find These High-Commission Offers Without Spending Hours Researching?
                 </h3>
                 <p style="font-size: 19px; line-height: 1.8; margin-bottom: 20px;">
                     Before AI, finding those 10 high-commission offers took HOURS of manual research.
@@ -1546,6 +1608,24 @@
         </div>
     </section>
     
+    <!-- TESTIMONIAL: Lisa - "I'm Too Busy" -->
+    <section class="section-medium" style="background: white;">
+        <div class="container" style="max-width: 900px;">
+            <div class="testimonial-box">
+                <div class="testimonial-content">
+                    <p class="testimonial-quote">
+                        "I'm a busy stay-at-home mom, caretaker for my elderly mother, and work-from-home volunteer. I purchased another program and found it overwhelming. When I had the opportunity to get coaching with Mike, I jumped at it. Every time I'm on a call, I feel inspired and motivated. Mike has that winning combination of competence, teacher, and cheerleader."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-name">Lisa Marie Ferreira</div>
+                        <div class="testimonial-location">Virginia</div>
+                        <div class="testimonial-context">Building a business so her autistic son can join her</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- THE OFFER -->
     <section class="section-medium" style="background: var(--neutral-50);">
         <div class="container">
@@ -1565,8 +1645,25 @@
         </div>
     </section>
     
+    <!-- TESTIMONIAL: Joe - "I've Been Burned Before" -->
+    <section class="section-medium" style="background: var(--neutral-50);">
+        <div class="container" style="max-width: 900px;">
+            <div class="testimonial-box">
+                <div class="testimonial-content">
+                    <p class="testimonial-quote">
+                        "Several years ago, I signed up with an organization to become an affiliate marketer. My coach wasn't always available and pushed me into something I had no interest in. I struggled and dropped out. Mike is completely different. He actively does what he teaches, answers my questions immediately, and was there every step of the way when I struggled with technical aspects. Having Mike as my coach has been a huge confidence builder."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-name">Joe Lilli</div>
+                        <div class="testimonial-context">After failing with another program</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- MODULE BREAKDOWN (AI MENTION #4: Module 2 only) -->
-    <section class="section-medium" style="background: white;">
+    <section class="section-medium" id="learn-more" style="background: white;">
         <div class="container">
             <h2 class="text-center mb-48">Here's Everything Inside:</h2>
             
@@ -1707,6 +1804,59 @@
         </div>
     </section>
     
+    <!-- WHO THIS ISN'T FOR SECTION -->
+    <section class="section-medium" style="background: white;">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="text-center" style="margin-bottom: 48px;">Before You Join: Let's Be Honest</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 40px;">
+                <!-- This ISN'T For You -->
+                <div style="background: #FEF2F2; padding: 32px; border-radius: 12px; border-left: 4px solid #DC2626;">
+                    <h3 style="font-size: 24px; margin-bottom: 20px; color: #DC2626;">❌ This ISN'T For You If:</h3>
+                    <ul style="list-style: none; padding-left: 0; line-height: 1.9;">
+                        <li style="padding: 8px 0; font-size: 16px; color: var(--neutral-700);">
+                            • You want money without doing any work (this is simple, not magic)
+                        </li>
+                        <li style="padding: 8px 0; font-size: 16px; color: var(--neutral-700);">
+                            • You can't dedicate 2 hours per week consistently
+                        </li>
+                        <li style="padding: 8px 0; font-size: 16px; color: var(--neutral-700);">
+                            • You expect results in 48 hours (first commission typically takes 14-21 days)
+                        </li>
+                        <li style="padding: 8px 0; font-size: 16px; color: var(--neutral-700);">
+                            • You're not willing to help people solve real problems
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- This IS For You -->
+                <div style="background: #ECFDF5; padding: 32px; border-radius: 12px; border-left: 4px solid #10B981;">
+                    <h3 style="font-size: 24px; margin-bottom: 20px; color: #059669;">✓ This IS For You If:</h3>
+                    <ul style="list-style: none; padding-left: 0; line-height: 1.9;">
+                        <li style="padding: 8px 0; font-size: 16px; color: var(--neutral-700);">
+                            • You've been burned before but aren't ready to quit
+                        </li>
+                        <li style="padding: 8px 0; font-size: 16px; color: var(--neutral-700);">
+                            • You have 2 hours per week to build something real
+                        </li>
+                        <li style="padding: 8px 0; font-size: 16px; color: var(--neutral-700);">
+                            • You want a system that respects your time and intelligence
+                        </li>
+                        <li style="padding: 8px 0; font-size: 16px; color: var(--neutral-700);">
+                            • You're okay with "boring" work that actually pays
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; background: var(--neutral-50); padding: 24px; border-radius: 8px;">
+                <p style="font-size: 18px; line-height: 1.7; margin-bottom: 0; color: var(--neutral-700);">
+                    <strong>If you're in the right column,</strong> you're exactly who this system was built for. Let's get started.
+                </p>
+            </div>
+        </div>
+    </section>
+    
     <!-- ORDER SECTION - Where CTAs Land -->
     <section class="section-medium" id="order" style="background: var(--neutral-50);">
         <div class="container" style="max-width: 700px;">
@@ -1741,33 +1891,31 @@
                 <div style="background: #EFF6FF; padding: 24px; border-radius: 8px; margin-bottom: 32px; border-left: 4px solid #2563EB;">
                     <div style="font-weight: 700; margin-bottom: 12px; font-size: 18px; color: var(--primary-900);">Why Is This $17 Instead of $397?</div>
                     <p style="font-size: 15px; line-height: 1.7; color: var(--neutral-700); margin-bottom: 12px;">
-                        <strong>Two reasons:</strong>
+                        <strong>Because I make my real money FROM this system, not from selling courses ABOUT it.</strong>
                     </p>
                     <p style="font-size: 15px; line-height: 1.7; color: var(--neutral-700); margin-bottom: 12px;">
-                        <strong>1)</strong> I'm testing a new onboarding sequence. I need 500 people to go through it and give feedback before I roll it out at full price.
+                        My affiliate commissions last month: <strong>$14,300</strong>. This course? Maybe $5K total if I'm lucky.
                     </p>
                     <p style="font-size: 15px; line-height: 1.7; color: var(--neutral-700); margin-bottom: 12px;">
-                        <strong>2)</strong> Honestly? I make my real money FROM the system (recurring commissions, remember?), not from selling courses about the system. I'd rather have 500 people succeed at $17 than make $397 from people who can't afford to start.
+                        I'd rather have 1,000 people succeed at $17 than 20 people gamble $397 and quit when it gets hard.
                     </p>
                     <p style="font-size: 15px; line-height: 1.7; color: var(--neutral-700); margin-bottom: 0;">
-                        Once I hit 500 enrollments with the new sequence, price goes back to $397.
+                        Once I hit 1,000 students with proven results, I'm raising the price. Not to $397. To $97. Because at that point, the social proof sells itself.
                     </p>
                 </div>
                 
                 <div style="background: var(--neutral-50); padding: 24px; border-radius: 8px; margin-bottom: 32px; text-align: left;">
                     <div style="font-weight: 600; margin-bottom: 16px; font-size: 18px; color: var(--primary-900);">You Get Instant Access To:</div>
                     <div style="padding: 8px 0; font-size: 16px; line-height: 1.6;">✅ All 5 Training Modules ($197 value)</div>
-                    <div style="padding: 8px 0; font-size: 16px; line-height: 1.6;">✅ Commission Finder Tool ($97 value)</div>
-                    <div style="padding: 8px 0; font-size: 16px; line-height: 1.6;">✅ 90-Day Action Roadmap ($127 value)</div>
-                    <div style="padding: 8px 0; font-size: 16px; line-height: 1.6;">✅ Traffic Source Quiz ($47 value)</div>
-                    <div style="padding: 8px 0; font-size: 16px; line-height: 1.6;">✅ Daily Action Planner ($147 value)</div>
                     <div style="padding: 8px 0; font-size: 16px; line-height: 1.6;">✅ AI Prompt Library ($97 value)</div>
-                    <div style="padding: 8px 0; font-size: 16px; line-height: 1.6; border-top: 2px solid var(--neutral-200); margin-top: 16px; padding-top: 16px; font-weight: 600; color: var(--primary-600);">Total Value: $712 | Your Price Today: $17</div>
+                    <div style="padding: 8px 0; font-size: 16px; line-height: 1.6;">✅ 90-Day Action Roadmap ($127 value)</div>
+                    <div style="padding: 8px 0; font-size: 16px; line-height: 1.6;">✅ Commission Finder Tool ($97 value)</div>
+                    <div style="padding: 8px 0; font-size: 16px; line-height: 1.6; border-top: 2px solid var(--neutral-200); margin-top: 16px; padding-top: 16px; font-weight: 600; color: var(--primary-600);">Total Value: $518 | Your Price Today: $17</div>
                 </div>
                 
-                <!-- BUY BUTTON - Replace href with your actual payment link -->
-                <a href="#" class="cta-button" style="display: block; background: #10B981; color: white; text-align: center; padding: 24px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 22px; margin-bottom: 24px; border: 3px solid #059669; box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);">
-                    Complete Purchase - $17 →
+                <!-- BUY BUTTON -->
+                <a href="https://explodely.com/p/1670441542" class="cta-button" style="display: block; background: #10B981; color: white; text-align: center; padding: 24px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 22px; margin-bottom: 24px; border: 3px solid #059669; box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);">
+                    Get Instant Access - $17 →
                 </a>
                 
                 <div style="text-align: center; color: var(--neutral-500); font-size: 14px; margin-bottom: 16px;">
@@ -1882,8 +2030,8 @@
             </div>
             
             <div class="text-center">
-                <a href="#" class="cta-button" style="background: #10B981; color: white; border-color: #059669; font-size: 24px;">
-                    Yes! Lock In $17 Before Price Increases →
+                <a href="#order" class="cta-button" style="background: #10B981; color: white; border-color: #059669; font-size: 24px;">
+                    Get Instant Access - $17 →
                 </a>
             </div>
             
@@ -1988,7 +2136,6 @@
                     <div class="stars" style="color: #FCD34D;">⭐⭐⭐⭐⭐</div>
                     <p class="quote" style="font-size: 22px; color: white; margin-bottom: 24px;">"I'd wasted over $2,000 on courses that promised easy money. Honestly thought this would be the same. But 11 days in? I made my first $487 commission. That's more than I made in 3 MONTHS with those other systems. Finally something that actually works."</p>
                     <div style="display: flex; align-items: center; gap: 16px;">
-                        <div class="photo" style="background: rgba(255,255,255,0.2); border: 3px solid white;">SM</div>
                         <div>
                             <div class="name" style="color: white; font-size: 20px;">Sarah M.</div>
                             <div class="title" style="color: rgba(255,255,255,0.9);">Former Teacher • Complete Beginner</div>
@@ -1997,7 +2144,6 @@
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="photo" style="background: #3B82F6;">MR</div>
                     <div class="stars">⭐⭐⭐⭐⭐</div>
                     <p class="quote">"Two years. That's how long I tried making money online with zero results. Started thinking maybe I was just bad at this. But this system is different because you're actually HELPING people find solutions they want. Made $843 my second week. Finally feels sustainable instead of just... hustling for scraps."</p>
                     <div class="name">Mike R.</div>
@@ -2005,7 +2151,6 @@
                 </div>
 
                 <div class="testimonial-card" style="border-left: 6px solid #8B5CF6;">
-                    <div class="photo" style="background: #8B5CF6;">JK</div>
                     <div class="stars">⭐⭐⭐⭐⭐</div>
                     <p class="quote" style="font-size: 17px;">"I'm a dental hygienist working full-time. Thought I didn't have time for a side business. But 2 hours a week? Yeah, I can do that. $2,100 in my first month while still working my job. This is the first thing that's actually worked without demanding my entire life."</p>
                     <div class="name">Jennifer K.</div>
@@ -2022,7 +2167,6 @@
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="photo" style="background: #EC4899;">AT</div>
                     <div class="stars">⭐⭐⭐⭐⭐</div>
                     <p class="quote">"So burned out from the grind and hustle nonsense. This is the opposite. Strategic, sustainable, respects my time. And it actually WORKS. Best $17 I ever spent. Made it back 40x over in my first 90 days. Not going back to that hamster wheel."</p>
                     <div class="name">Amanda T.</div>
@@ -2030,7 +2174,6 @@
                 </div>
 
                 <div class="testimonial-card" style="border-left: 6px solid #F97316;">
-                    <div class="photo" style="background: #F97316;">RH</div>
                     <div class="stars">⭐⭐⭐⭐⭐</div>
                     <p class="quote">"I'm not tech-savvy. Like, at all. But the step-by-step walkthroughs made this so easy. If I can do this, literally anyone can. First commission was $650. I legitimately teared up when I saw it hit my account. Finally proved to myself this internet thing isn't just for young people."</p>
                     <div class="name">Robert H.</div>
@@ -2204,8 +2347,8 @@
             <h2 class="text-center" style="color: white; font-size: 48px; margin-bottom: 32px;">I'm Ready.<br>Show Me The System.</h2>
             
             <div class="text-center">
-                <a href="#order" class="cta-button" style="font-size: 24px; padding: 22px 60px; background: #10B981; color: white; border-color: #059669;">
-                    Yes! Give Me This System for $17 →
+                <a href="https://explodely.com/p/1670441542" class="cta-button" style="font-size: 24px; padding: 22px 60px; background: #10B981; color: white; border-color: #059669;">
+                    Get Instant Access - $17 →
                 </a>
             </div>
             
@@ -2714,7 +2857,7 @@
         
         // Handle exit intent CTA - simply close the popup
         function handleExitPopupCTA() {
-            closeExitIntent();
+            window.location.href = 'https://explodely.com/p/1670441542';
         }
     </script>
 </body>
